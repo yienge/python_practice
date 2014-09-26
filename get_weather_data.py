@@ -46,10 +46,10 @@ class get_weather_data(object):
                     text_node = time_node.find('text')
                     ci.append(text_node.text)
 
-            for i in range(3):
-                print u'時間區段：', time[i]
-                print u'天氣：', wx[i]
-                print u'最高溫度：', maxt[i]
-                print u'體感：', ci[i]
+            for t, w, m, c in zip(time, wx, maxt, ci):
+                print u'時間區段：', t
+                print u'天氣：', w
+                print u'最高溫度：', m
+                print u'體感：', c
 
 get_data = get_weather_data()
